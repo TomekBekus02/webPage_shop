@@ -1,0 +1,54 @@
+.welcome-page{
+    background-image: url('../../assets/tlo.jpg');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(216, 218, 221);
+    font-weight: 800;
+}
+.loginContainer{
+    background-color: #ebbe9a9b;
+    border-radius: 5px;
+    height: 50%;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+}
+.loginContainer button{
+    width: 100%;
+    font-size: 18px;
+    padding: 2px;
+    border: none;
+    cursor: pointer;
+}
+.loginContainer button:hover{
+    background-color: rgb(180, 134, 88);
+    color: #ffff;
+}
+.loginContainer h1{
+    font-size: 26px;
+    color: #ffff;
+    font-weight: 900;
+}
+.inputStyle{
+    font-size: 18px;
+    padding: 3px;
+    border: none;
+}
+.inputStyle:focus{
+    border: none;
+    outline: none;
+}
+.checkBox{
+    display: flex;
+    justify-content: start;
+    width: 100%;
+    margin-bottom: 15px;
+}
