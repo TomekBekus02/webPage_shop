@@ -1,14 +1,26 @@
+import {Products} from '../../ProducuctsData'
+import Product from './Product/Product'
 import './ShopPage.css'
+
 export default function ShoPage(){
 
     return (
         <div className="shopePageContainer">
-            <div className="featuresContainer">
-
-            </div>
-            <div className="mainProductsContainer">
-
-            </div>
+            <section className="featuresContainer">
+                <p>There will be features</p>
+            </section>
+            <section className="mainProductsContainer">
+                <h1>Everything For Everyone</h1>
+                <div className="ProductsContainer">
+                    {Products.map(
+                        (product) => {
+                            return (
+                                <Product key={product.id} {...product}/>
+                            )
+                        }
+                    )}
+                </div>
+            </section>
         </div>
     )
 }
