@@ -1,7 +1,9 @@
 import WelcomePage from './components/WelcomePage/WelcomePage'
+import ShopPage from './components/ShopPage/ShopPage.jsx'
 import './App.css'
 import {loginData} from'./loginData.js'
 import { useState } from 'react'
+
 
 function App() {
   const [loginSuccess, setLoginSuccess] = useState();
@@ -16,8 +18,8 @@ function App() {
   }
   return (
     <>
-      {loginSuccess
-      ? <p>Hi</p>
+      {!loginSuccess //set ! to have easly working space with component
+      ? <ShopPage/>
       : <WelcomePage handleInput={handleInputCorrectness}/>
       }
       
