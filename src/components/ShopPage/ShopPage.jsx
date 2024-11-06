@@ -8,6 +8,7 @@ export default function ShoPage(){
         <div className="shopePageContainer">
             <section className="featuresContainer">
                 <p>There will be features</p>
+                <button>Cart</button>
             </section>
             <section className="mainProductsContainer">
                 <h1>Everything For Everyone</h1>

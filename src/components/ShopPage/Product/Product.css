@@ -1,0 +1,46 @@
+.productContainer{
+    box-sizing: border-box;
+    width: 350px;
+    height: 100%;
+    background-color: rgba(242, 188, 112, 0.548);
+    border-radius: 10px;
+}
+.title{
+    padding: 5px;
+}
+.title h2{
+    color: rgb(70, 43, 6);
+}
+.title h4{
+    color: rgb(120, 91, 71);
+}
+.description{
+    padding: 5px;
+    font-size: 20px;
+}
+.description p{
+    color: rgb(97, 76, 47);
+}
+.buttonContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+button{
+    background-color: rgb(171, 116, 39);
+    border: none;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 8px;
+    color: aliceblue;
+    font-weight: 700;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(205, 137, 43);
+}
+img{
+    width: 350px;
+    height: 250px;
+    border-radius: 10px;
+}

@@ -3,9 +3,17 @@ export default function Product({name, price, description, image}){
     return (
         <section className="productContainer">
             <img src={image} alt={`${name} photo`} />
-            <h2>{name}</h2>
-            <p>${price}</p>
-            <p>{description}</p>
+            <div className="title">
+                <h2>{name}</h2>
+                <h4>${price}</h4>
+            </div>
+            <div className="description">
+                <p>{description}</p>
+            </div>
+            <div className="buttonContainer">
+                <button>Add to Cart</button>
+            </div>
+
         </section>
     )
 }

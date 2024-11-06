@@ -1,5 +1,28 @@
 .shopePageContainer{
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     background-color: rgb(194, 158, 100);
+}
+.mainProductsContainer{
+    width: 100%;
+}
+.ProductsContainer{
+    width: 90%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 20px;
+    margin: auto;
+}
+.featuresContainer{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.featuresContainer p{
+    margin: 10px;
+}
+.featuresContainer button{
+    padding: 6px 15px 6px 15px;
+    font-size: 16px;
 }
