@@ -1,5 +1,6 @@
 import './Product.css'
-export default function Product({name, price, description, image}){
+
+export default function Product({name, price, description, image, AddProductCart}){ 
     return (
         <section className="productContainer">
             <img src={image} alt={`${name} photo`} />
@@ -11,7 +12,7 @@ export default function Product({name, price, description, image}){
                 <p>{description}</p>
             </div>
             <div className="buttonContainer">
-                <button>Add to Cart</button>
+                <button onClick={AddProductCart}>Add to Cart</button>
             </div>
 
         </section>
