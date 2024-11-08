@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 import { useContext, createContext } from 'react'
 import {Products} from '../../ProducuctsData'
 import Product from './Product/Product'
@@ -42,14 +42,14 @@ export default function ShopPage(){
         })    
         
     }
-
+    const dialogRef = useRef();
     return (
         <CartContext.Provider value={{productsCart, handleAddProductCart, handleRemoveProductCart}}>
             <div className="shopePageContainer">
-                <CartButton productsCart={productsCart}/>
+                <CartButton productsCart={productsCart} ref={dialogRef}/>
                 <section className="featuresContainer">
                     <p>There will be features</p>
-                    <button>{`Cart (${productsQuantity})`}</button>
+                    <button onClick={() =>dialogRef.current.openCart()}>{`Cart (${productsQuantity})`}</button>
                 </section>
                 <section className="mainProductsContainer">
                     <h1>Everything For Everyone</h1>
