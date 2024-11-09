@@ -33,9 +33,10 @@
     color: #ffff;
 }
 .loginContainer h1{
-    font-size: 26px;
+    font-size: 35px;
     color: #ffff;
     font-weight: 900;
+    margin-bottom: 20px;
 }
 .inputStyle{
     font-size: 18px;
@@ -51,4 +52,13 @@
     justify-content: start;
     width: 100%;
     margin-bottom: 15px;
+}
+.wrongLoginInfo{
+    color: rgba(187, 26, 26, 0.842);
+}
+.wrongLoginInputStyle{
+    border: 2px solid rgba(187, 26, 26, 0.752);
+}
+.wrongLoginInputStyle:focus{
+    border: 2px solid rgba(187, 26, 26, 0.752);
 }
