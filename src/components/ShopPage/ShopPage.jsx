@@ -2,7 +2,7 @@ import { useRef, useState } from 'react'
 import { useContext, createContext } from 'react'
 import {Products} from '../../ProducuctsData'
 import Product from './Product/Product'
-import CartButton from './CartButton/CartButton'
+import CartDialog from './CartButton/CartDialog'
 import './ShopPage.css'
 
 export const CartContext = createContext(null);
@@ -46,7 +46,7 @@ export default function ShopPage(){
     return (
         <CartContext.Provider value={{productsCart, handleAddProductCart, handleRemoveProductCart}}>
             <div className="shopePageContainer">
-                <CartButton productsCart={productsCart} ref={dialogRef}/>
+                <CartDialog productsCart={productsCart} ref={dialogRef}/>
                 <section className="featuresContainer">
                     <p>There will be features</p>
                     <button onClick={() =>dialogRef.current.openCart()}>{`Cart (${productsQuantity})`}</button>

@@ -1,11 +1,12 @@
 import CartProductDisplay from './CartProductDisplay/CartProductDisplay';
-import './CartButton.css'
+import './CartDialog.css'
 import { forwardRef, useImperativeHandle, useRef } from 'react';
 
-const CartButton = forwardRef(function CartButton({productsCart}, ref){
+const CartButton = forwardRef(function CartDialog({productsCart}, ref){
     const dialog = useRef();
     let displayCart = <p>You'r cart is empty</p>
     if(productsCart.length > 0){ displayCart = <CartProductDisplay/> }
+
     useImperativeHandle(ref, ()=>{
         return {
             openCart(){
@@ -27,10 +28,15 @@ const CartButton = forwardRef(function CartButton({productsCart}, ref){
             <section>
                 {displayCart}
             </section>
-            <form method="dialog">
-                <button>Close cart</button>
+            <section className='price'>
                 <p>{`Sum: ${sum.toFixed(2)}$`}</p>
-            </form>
+            </section>
+            <section className='footerCart'>
+                <form method="dialog">
+                    <button>Close cart</button>
+                </form>
+                <button>Checkout</button>
+            </section>
         </dialog>
     )
 })

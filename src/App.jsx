@@ -18,7 +18,7 @@ function App() {
   }
   return (
     <>
-      {!loginSuccess //set ! to have easly working space with component
+      {loginSuccess //set ! to have easly working space with component
       ? <ShopPage/>
       : <WelcomePage handleInput={handleInputCorrectness}/>
       }

@@ -1,0 +1,20 @@
+.CartContainer{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: none;
+    width: 350px;
+}
+.CartContainer .footerCart{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.CartContainer .price{
+    display: flex;
+    justify-content: end;
+    font-size: 20px;
+    font-weight: 800;
+}
