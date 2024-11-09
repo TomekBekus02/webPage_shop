@@ -8,11 +8,16 @@ export default function CartProductDisplay({}){
             {productsCart.map(cartProduct => {
                 return(
                     <li key={cartProduct.id}>
-                        <h3> {cartProduct.product.name} </h3>
-                        <p> {cartProduct.product.price} </p>
-                        <button onClick={() => handleRemoveProductCart(cartProduct.id)}>-</button>
-                        <p>{cartProduct.quantity}</p>
-                        <button onClick={() => handleAddProductCart(cartProduct.id)}>+</button>
+                        <div className="productInfoContainer">
+                            <h3> {cartProduct.product.name} </h3>
+                            <p> {`${cartProduct.product.price}$`} </p>
+                        </div>
+                        <div className="productQuantityContainer">
+                            <button onClick={() => handleRemoveProductCart(cartProduct.id)}>-</button>
+                            <p>{cartProduct.quantity}</p>
+                            <button onClick={() => handleAddProductCart(cartProduct.id)}>+</button>
+                        </div>
+
                     </li>
                 )
             })}

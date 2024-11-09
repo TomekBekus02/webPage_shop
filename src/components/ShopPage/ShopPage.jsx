@@ -46,23 +46,28 @@ export default function ShopPage(){
     return (
         <CartContext.Provider value={{productsCart, handleAddProductCart, handleRemoveProductCart}}>
             <div className="shopePageContainer">
-                <CartDialog productsCart={productsCart} ref={dialogRef}/>
-                <section className="featuresContainer">
-                    <p>There will be features</p>
-                    <button onClick={() =>dialogRef.current.openCart()}>{`Cart (${productsQuantity})`}</button>
-                </section>
-                <section className="mainProductsContainer">
-                    <h1>Everything For Everyone</h1>
-                    <div className="ProductsContainer">
-                        {Products.map(
-                            (product) => {
-                                return (
-                                    <Product key={product.id} AddProductCart={() => handleAddProductCart(product.id)}{...product}/>
-                                )
-                            }
-                        )}
-                    </div>
-                </section>
+                <div className='mainshopePage'>
+                    <CartDialog productsCart={productsCart} ref={dialogRef}/>
+                    <section className="featuresContainer">
+                        <p>There will be features</p>
+                        <button 
+                            onClick={() =>dialogRef.current.openCart()}
+                            className="cartButton"
+                        >{`Cart (${productsQuantity})`}</button>
+                    </section>
+                    <section className="mainProductsContainer">
+                        <h1>Everything For Everyone</h1>
+                        <div className="ProductsContainer">
+                            {Products.map(
+                                (product) => {
+                                    return (
+                                        <Product key={product.id} AddProductCart={() => handleAddProductCart(product.id)}{...product}/>
+                                    )
+                                }
+                            )}
+                        </div>
+                    </section>
+                </div>
             </div>
         </CartContext.Provider>
     )

@@ -33,9 +33,9 @@ const CartButton = forwardRef(function CartDialog({productsCart}, ref){
             </section>
             <section className='footerCart'>
                 <form method="dialog">
-                    <button>Close cart</button>
+                    <button className='CloseCartButton'>Close</button>
                 </form>
-                <button>Checkout</button>
+                <button className='CheckoutButton'>Checkout</button>
             </section>
         </dialog>
     )

@@ -5,16 +5,32 @@
     transform: translate(-50%, -50%);
     padding: 20px;
     border: none;
-    width: 350px;
+    border-radius: 20px;
+    width: 550px;
+    background-color: rgb(218, 191, 154);
+    text-align: center;
 }
-.CartContainer .footerCart{
+.footerCart{
     display: flex;
     align-items: center;
     justify-content: end;
+    margin-top: 10px;
+}
+.footerCart .CloseCartButton {
+    margin: 0;
+    background: none;
+    color: #000;
+    cursor: pointer;
+}
+.footerCart .CloseCartButton:hover{
+    background: none;
+}
+.footerCart .CheckoutButton{
+    margin: 0;
 }
 .CartContainer .price{
     display: flex;
     justify-content: end;
-    font-size: 20px;
+    font-size: 23px;
     font-weight: 800;
 }
