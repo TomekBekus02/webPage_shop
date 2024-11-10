@@ -7,6 +7,24 @@
     width: 100%;
     padding: 0 120px;
 }
+.shopHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.featuresContainer{
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+}
+.featuresContainer p{
+    margin: 10px;
+}
+.featuresContainer .cartButton{
+    padding: 7px 17px;
+    font-size: 22px;
+}
 .mainProductsContainer{
     display: flex;
     flex-direction: column;
@@ -22,17 +40,4 @@
     justify-content: center;
     row-gap: 30px;
     margin: 30px 0;
-}
-.featuresContainer{
-    width: 100%;
-    display: flex;
-    justify-content: flex-end;
-    padding-top: 20px;
-}
-.featuresContainer p{
-    margin: 10px;
-}
-.featuresContainer .cartButton{
-    padding: 7px 17px;
-    font-size: 22px;
 }

@@ -54,15 +54,17 @@ export default function ShopPage(){
                         productsCart={productsCart} 
                         ref={dialogRef}
                     />
-                    <section className="featuresContainer">
-                        <p>There will be features</p>
-                        <button 
-                            onClick={() =>dialogRef.current.openCart()}
-                            className="cartButton"
-                        >{`Cart (${productsQuantity})`}</button>
-                    </section>
-                    <section className="mainProductsContainer">
+                    <div className="shopHeader">
                         <h1>Everything For Everyone</h1>
+                        <section className="featuresContainer">
+                            <p>There will be features</p>
+                            <button 
+                                onClick={() =>dialogRef.current.openCart()}
+                                className="cartButton"
+                            >{`Cart (${productsQuantity})`}</button>
+                        </section>
+                    </div>        
+                    <section className="mainProductsContainer">
                         <div className="ProductsContainer">
                             {Products.map(
                                 (product) => {

@@ -7,7 +7,7 @@ const CartButton = forwardRef(function CartDialog({productsCart}, ref){
     const dialog = useRef();
     
 
-    let displayCart = <p>You'r cart is empty</p>
+    let displayCart = <p className='cartInfo'>You'r cart is empty</p>
     if(productsCart.length > 0){ displayCart = <CartProductDisplay/> }
 
     useImperativeHandle(ref, ()=>{
