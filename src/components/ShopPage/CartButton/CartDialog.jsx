@@ -3,7 +3,10 @@ import './CartDialog.css'
 import { forwardRef, useImperativeHandle, useRef } from 'react';
 
 const CartButton = forwardRef(function CartDialog({productsCart}, ref){
+
     const dialog = useRef();
+    
+
     let displayCart = <p>You'r cart is empty</p>
     if(productsCart.length > 0){ displayCart = <CartProductDisplay/> }
 
@@ -23,7 +26,7 @@ const CartButton = forwardRef(function CartDialog({productsCart}, ref){
         return accumulator + price * quantity
     }, 0)
     return (
-        <dialog className="CartContainer" ref={dialog}>
+        <dialog className='CartContainer' ref={dialog}>
             <h1>Your shopping cart</h1>
             <section>
                 {displayCart}

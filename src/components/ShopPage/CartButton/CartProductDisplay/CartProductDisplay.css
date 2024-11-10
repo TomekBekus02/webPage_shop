@@ -13,6 +13,7 @@ li {
     display: flex;
     align-items: center;
     padding-left: 5px;
+    color: rgb(97, 76, 47);
 }
 .productInfoContainer p {
     padding: 7px;

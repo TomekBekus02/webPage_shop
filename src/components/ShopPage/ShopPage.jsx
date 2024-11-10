@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useContext, createContext } from 'react'
 import {Products} from '../../ProducuctsData'
 import Product from './Product/Product'
@@ -11,11 +11,13 @@ export default function ShopPage(){
 
     const [productsCart, setProductsCart] = useState([]);
     const [productsQuantity, setProductsQuantity] = useState(0);
+
     function handleAddProductCart(productID){
         setProductsQuantity(prevQuantity => prevQuantity+1);
         setProductsCart(prevCart =>{
             const AddedProduct = Products.find(product => product.id === productID);
             const newProduct = prevCart.find(product => product.id === productID);
+            
             if(newProduct){
 
                 return prevCart.map(
@@ -27,6 +29,7 @@ export default function ShopPage(){
                 return [...prevCart, {id: productID, quantity: 1, product: AddedProduct}]
             }
         })
+        
     }
     function handleRemoveProductCart(productID){
         setProductsQuantity(prevQuantity => { return prevQuantity > 1 ? prevQuantity - 1 : 0;})
@@ -47,7 +50,10 @@ export default function ShopPage(){
         <CartContext.Provider value={{productsCart, handleAddProductCart, handleRemoveProductCart}}>
             <div className="shopePageContainer">
                 <div className='mainshopePage'>
-                    <CartDialog productsCart={productsCart} ref={dialogRef}/>
+                    <CartDialog 
+                        productsCart={productsCart} 
+                        ref={dialogRef}
+                    />
                     <section className="featuresContainer">
                         <p>There will be features</p>
                         <button 
