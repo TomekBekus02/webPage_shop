@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+15&family=Oswald:wght@200..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 .welcome-page{
     background-image: url('../../assets/tlo.jpg');
     width: 100vw;
@@ -11,10 +12,10 @@
     font-weight: 800;
 }
 .loginContainer{
-    background-color: #ebbe9a9b;
+    background-color: #ebbe9abf;
     border-radius: 5px;
     height: 50%;
-    width: 35%;
+    min-width: 35%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,10 +23,12 @@
     padding: 60px;
 }
 .loginContainer button{
-    width: 100%;
+    width: 50%;
     font-size: 18px;
     padding: 2px;
     border: none;
+    border-radius: 10px;
+    transition: background-color 0.2s ease;
     cursor: pointer;
 }
 .loginContainer button:hover{
@@ -33,10 +36,12 @@
     color: #ffff;
 }
 .loginContainer h1{
+    font-family: "Playfair Display", serif;
     font-size: 35px;
     color: #ffff;
     font-weight: 900;
     margin-bottom: 20px;
+    text-align: center;
 }
 .inputStyle{
     font-size: 18px;
@@ -52,6 +57,9 @@
     justify-content: start;
     width: 100%;
     margin-bottom: 15px;
+}
+.checkBox input{
+    margin-right: 5px;
 }
 .wrongLoginInfo{
     color: rgba(187, 26, 26, 0.842);

@@ -20,8 +20,11 @@ function App() {
   }
   return (
     <>
-      {!loginSuccess //set ! to have easly working space with component
-      ? <ShopPage/>
+      {loginSuccess //set ! to have easly working space with component
+      ? <ShopPage 
+          setLoginSuccess={setLoginSuccess} 
+          setisLoginButtonClicked={setisLoginButtonClicked}
+        />
       : <WelcomePage 
           handleInput={handleInputCorrectness} 
           loginSuccess={loginSuccess}

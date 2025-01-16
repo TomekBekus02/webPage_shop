@@ -7,7 +7,7 @@ import './ShopPage.css'
 
 export const CartContext = createContext(null);
 
-export default function ShopPage(){
+export default function ShopPage({setLoginSuccess}){
 
     const [productsCart, setProductsCart] = useState([]);
     const [productsQuantity, setProductsQuantity] = useState(0);
@@ -62,6 +62,7 @@ export default function ShopPage(){
                                 onClick={() =>dialogRef.current.openCart()}
                                 className="cartButton"
                             >{`Cart (${productsQuantity})`}</button>
+                            <button onClick={() => setLoginSuccess(loginStatus => !loginStatus)}>Log out</button>
                         </section>
                     </div>        
                     <section className="mainProductsContainer">
