@@ -3,6 +3,7 @@ import { useContext, createContext } from 'react'
 import {Products} from '../../ProducuctsData'
 import Product from './Product/Product'
 import CartDialog from './CartButton/CartDialog'
+import ThemeButton from './ThemeButton/themeButton'
 import './ShopPage.css'
 
 export const CartContext = createContext(null);
@@ -57,12 +58,12 @@ export default function ShopPage({setLoginSuccess}){
                     <div className="shopHeader">
                         <h1>Everything For Everyone</h1>
                         <section className="featuresContainer">
-                            <p>There will be features</p>
+                            <ThemeButton/>
                             <button 
                                 onClick={() =>dialogRef.current.openCart()}
-                                className="cartButton"
+                                className="cartButton userButton"
                             >{`Cart (${productsQuantity})`}</button>
-                            <button onClick={() => setLoginSuccess(loginStatus => !loginStatus)}>Log out</button>
+                            <button className='logOutButton userButton' onClick={() => setLoginSuccess(loginStatus => !loginStatus)}>Log out</button>
                         </section>
                     </div>        
                     <section className="mainProductsContainer">

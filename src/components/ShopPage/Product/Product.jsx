@@ -13,7 +13,7 @@ export default function Product({name, price, description, image, AddProductCart
                     <p>{description}</p>
                 </div>
                 <div className="buttonContainer">
-                    <button onClick={AddProductCart}>Add to Cart</button>
+                    <button className='addProductButton' onClick={AddProductCart}>Add to Cart</button>
                 </div>
             </div>
         </section>

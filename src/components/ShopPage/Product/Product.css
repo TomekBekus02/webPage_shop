@@ -33,7 +33,7 @@
     display: flex;
     justify-content: flex-end;
 }
-.shopePageContainer button{
+.buttonContainer .addProductButton{
     background-color: rgb(171, 116, 39);
     border: none;
     border-radius: 10px;
@@ -44,7 +44,7 @@
     font-size: 17px;
     cursor: pointer;
 }
-.shopePageContainer button:hover{
+.buttonContainer button:hover{
     background-color: rgb(205, 137, 43);
 }
 img{

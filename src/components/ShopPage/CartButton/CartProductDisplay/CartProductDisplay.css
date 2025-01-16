@@ -26,7 +26,10 @@ li {
     background: none;
     font-size: 25px;
     color: black;
-    padding: 0;
+    padding: 0px 9px;
+    margin: 0px 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
 .productQuantityContainer button:hover{
     background: none;

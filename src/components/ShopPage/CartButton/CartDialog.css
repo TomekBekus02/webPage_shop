@@ -17,6 +17,17 @@
     justify-content: end;
     margin-top: 10px;
 }
+.footerCart button {
+    background-color: rgb(171, 116, 39);
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 8px;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 22px;
+    cursor: pointer;
+}
 .footerCart .CloseCartButton {
     margin: 0;
     background: none;

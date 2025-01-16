@@ -30,9 +30,25 @@
 .featuresContainer p{
     margin: 10px;
 }
-.featuresContainer button{
-    padding: 7px 17px;
+.featuresContainer .userButton{
+    background-color: rgb(171, 116, 39);
+    border: none;
+    border-radius: 10px;
+    margin: 5px;
+    padding: 8px;
+    color: aliceblue;
+    font-weight: 700;
     font-size: 22px;
+    cursor: pointer;
+}
+.featuresContainer .userButton:hover{
+    background-color: rgb(205, 137, 43);
+}
+.featuresContainer .logOutButton{
+    background-color: rgb(167, 50, 50);
+}
+.featuresContainer .logOutButton:hover{
+    background-color: rgb(235, 93, 93);
 }
 .mainProductsContainer{
     display: flex;
