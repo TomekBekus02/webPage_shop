@@ -52,3 +52,29 @@ img{
     height: 300px;
     border-radius: 10px 10px 0 0;
 }
+
+
+/*DARK MODE STYLES*/
+.darkMode .productStyle{
+    background-color: rgb(100, 90, 72);
+}
+.darkMode img{
+    filter: brightness(0.85);
+}
+.darkMode .title h2{
+    color: rgb(255, 255, 255);
+}
+.darkMode .title h4{
+    color: rgb(178, 171, 171);
+}
+.darkMode .description p{
+    color: rgb(162, 157, 147);
+}
+.darkMode .addProductButton{
+    background-color: rgb(110, 72, 19);
+    color: aliceblue;
+}
+.darkMode .addProductButton:hover{
+    background-color: rgb(77, 49, 12);
+    color: aliceblue;
+}

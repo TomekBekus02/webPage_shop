@@ -50,3 +50,21 @@
     padding-top: 20px;
     font-size: 20px;
 }
+
+/*DARK MODE STYLESS*/
+.darkMode dialog{
+    background-color: #765e3b;
+}
+.darkMode .CartContainer h1{
+    color: aliceblue;
+}
+.darkMode p{
+    color: antiquewhite;
+}
+.darkMode .CheckoutButton{
+    background-color: rgb(110, 72, 19);
+    color: aliceblue;
+} 
+.darkMode .CloseCartButton{
+    color: aliceblue;
+}

@@ -21,17 +21,17 @@
     border-radius: 50px;
     border: none;
 }
-.DarkMode .themeCircle{
+.darkMode .themeCircle{
     background-color: rgb(203, 199, 194);
     transform: translateX(15px);
 }
-.DarkMode .themeContainer{
+.darkMode .themeContainer{
     background-color: rgb(89, 85, 79);
 }
 .ligthMode .themeCircle{
     background-color: rgb(39, 38, 38);
     transform: translateX(-15px);
 }
-.ligthMode .themeContainer:hover{
+.ligthMode .themeContainer{
     background-color: rgb(224, 223, 222);
 }

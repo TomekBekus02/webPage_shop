@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import './themeButton.css'
+import { useContext } from 'react'
+import {ThemeContext} from '../../../App'
+
 export default function ThemeButton(){
-    const [lightTheme, setlightTheme] = useState(false);
+    const {currentTheme, handleCurrentTheme} = useContext(ThemeContext);
     return(
-        <button onClick={() => setlightTheme(theme => !theme)} className={`themeButton ${lightTheme ?'DarkMode': 'ligthMode'} `}>
+        <button onClick={handleCurrentTheme} className={`themeButton ${currentTheme} `}>
             <div className='themeContainer'>
                 <div className="themeCircle"></div>
             </div>
-
         </button>
     )
 }

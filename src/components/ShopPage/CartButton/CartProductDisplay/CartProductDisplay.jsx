@@ -1,10 +1,13 @@
 import { useContext } from 'react'
 import './CartProductDisplay.css'
 import {CartContext} from '../../ShopPage'
+import { ThemeContext } from '../../../../App';
+
 export default function CartProductDisplay({}){
     const {productsCart, handleAddProductCart, handleRemoveProductCart} = useContext(CartContext);
+    const {currentTheme} = useContext(ThemeContext)
     return (
-        <ul>
+        <ul className={`${currentTheme}`}>
             {productsCart.map(cartProduct => {
                 return(
                     <li key={cartProduct.id}>

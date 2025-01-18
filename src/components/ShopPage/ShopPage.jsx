@@ -4,15 +4,17 @@ import {Products} from '../../ProducuctsData'
 import Product from './Product/Product'
 import CartDialog from './CartButton/CartDialog'
 import ThemeButton from './ThemeButton/themeButton'
+import { ThemeContext } from '../../App'
 import './ShopPage.css'
 
 export const CartContext = createContext(null);
 
-export default function ShopPage({setLoginSuccess}){
+export default function ShopPage({setLoginSuccess, setisLoginButtonClicked}){
 
     const [productsCart, setProductsCart] = useState([]);
     const [productsQuantity, setProductsQuantity] = useState(0);
-
+    const {currentTheme} = useContext(ThemeContext);
+    
     function handleAddProductCart(productID){
         setProductsQuantity(prevQuantity => prevQuantity+1);
         setProductsCart(prevCart =>{
@@ -46,37 +48,43 @@ export default function ShopPage({setLoginSuccess}){
         })    
         
     }
+    function handleLogOut(){
+        setisLoginButtonClicked(false);
+        setLoginSuccess(loginStatus => !loginStatus)
+    }
     const dialogRef = useRef();
     return (
         <CartContext.Provider value={{productsCart, handleAddProductCart, handleRemoveProductCart}}>
-            <div className="shopePageContainer">
-                <div className='mainshopePage'>
-                    <CartDialog 
-                        productsCart={productsCart} 
-                        ref={dialogRef}
-                    />
-                    <div className="shopHeader">
-                        <h1>Everything For Everyone</h1>
-                        <section className="featuresContainer">
-                            <ThemeButton/>
-                            <button 
-                                onClick={() =>dialogRef.current.openCart()}
-                                className="cartButton userButton"
-                            >{`Cart (${productsQuantity})`}</button>
-                            <button className='logOutButton userButton' onClick={() => setLoginSuccess(loginStatus => !loginStatus)}>Log out</button>
+            <div className={`${currentTheme}`}>
+                <div className="shopePageContainer">
+                    <div className='mainshopePage'>
+                        <CartDialog 
+                            productsCart={productsCart} 
+                            ref={dialogRef}
+                        />
+                        <div className="shopHeader">
+                            <h1>Everything For Everyone</h1>
+                            <section className="featuresContainer">
+                                <ThemeButton/>
+                                <button 
+                                    onClick={() =>dialogRef.current.openCart()}
+                                    className="cartButton userButton"
+                                >{`Cart (${productsQuantity})`}</button>
+                                <button className='logOutButton userButton' onClick={handleLogOut}>Log out</button>
+                            </section>
+                        </div>        
+                        <section className="mainProductsContainer">
+                            <div className="ProductsContainer">
+                                {Products.map(
+                                    (product) => {
+                                        return (
+                                            <Product key={product.id} AddProductCart={() => handleAddProductCart(product.id)}{...product}/>
+                                        )
+                                    }
+                                )}
+                            </div>
                         </section>
-                    </div>        
-                    <section className="mainProductsContainer">
-                        <div className="ProductsContainer">
-                            {Products.map(
-                                (product) => {
-                                    return (
-                                        <Product key={product.id} AddProductCart={() => handleAddProductCart(product.id)}{...product}/>
-                                    )
-                                }
-                            )}
-                        </div>
-                    </section>
+                    </div>
                 </div>
             </div>
         </CartContext.Provider>

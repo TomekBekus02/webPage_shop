@@ -35,3 +35,15 @@ li {
     background: none;
     color: rgb(56, 54, 54);
 }
+
+
+/*DARK MODE STYLESS*/
+.darkMode li{
+    background-color: rgb(74, 69, 54);
+}
+.darkMode h3{
+    color: rgb(255, 255, 255);
+}
+.darkMode button{
+    color: rgb(255, 255, 255);
+}

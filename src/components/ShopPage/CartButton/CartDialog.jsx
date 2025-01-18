@@ -1,11 +1,14 @@
 import CartProductDisplay from './CartProductDisplay/CartProductDisplay';
 import './CartDialog.css'
-import { forwardRef, useImperativeHandle, useRef } from 'react';
+import { forwardRef, useContext, useImperativeHandle, useRef } from 'react';
+import ThemeButton from '../ThemeButton/themeButton';
+import { ThemeContext } from '../../../App';
+
 
 const CartButton = forwardRef(function CartDialog({productsCart}, ref){
 
     const dialog = useRef();
-    
+    const {currentTheme} = useContext(ThemeContext);
 
     let displayCart = <p className='cartInfo'>You'r cart is empty</p>
     if(productsCart.length > 0){ displayCart = <CartProductDisplay/> }
@@ -26,7 +29,7 @@ const CartButton = forwardRef(function CartDialog({productsCart}, ref){
         return accumulator + price * quantity
     }, 0)
     return (
-        <dialog className='CartContainer' ref={dialog}>
+        <dialog className={`CartContainer ${currentTheme}`} ref={dialog}>
             <h1>Your shopping cart</h1>
             <section>
                 {displayCart}

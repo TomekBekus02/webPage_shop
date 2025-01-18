@@ -5,16 +5,23 @@
     height: 100vh;
     background-size: cover;
     background-position: center;
+    display: grid;
+    grid-template-rows: 10% 90%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(216, 218, 221);
+    font-weight: 800;
+}
+.container{
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(216, 218, 221);
-    font-weight: 800;
 }
 .loginContainer{
     background-color: #ebbe9abf;
     border-radius: 5px;
-    height: 50%;
     min-width: 35%;
     display: flex;
     flex-direction: column;
@@ -69,4 +76,24 @@
 }
 .wrongLoginInputStyle:focus{
     border: 2px solid rgba(187, 26, 26, 0.752);
+}
+.themeButtonContainer{
+    display: flex;
+    width: 100%;
+    justify-content: end;
+    padding: 30px;
+}
+
+/*DARK MODE STYLESS*/
+.darkMode .loginContainer{
+    background-color: #665343e8;
+}
+.darkMode .loginButton{
+    background-color: #573d26e8;
+}
+.darkMode .loginButton:hover{
+    background-color: #33271be8;
+}
+.darkMode .wrongLoginInfo{
+    color: rgb(220, 95, 95);
 }
