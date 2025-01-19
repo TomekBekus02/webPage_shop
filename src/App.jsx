@@ -28,7 +28,7 @@ function App() {
     localStorage.setItem('themeValue', JSON.stringify(theme));
   }
   function handleInputCorrectness(inputLogin, inputPassword){
-    if(inputLogin===loginData.login && inputPassword===loginData.password){
+    if(inputLogin.trim()===loginData.login && inputPassword.trim()===loginData.password){
       setLoginSuccess(true);
     }
     else{

@@ -83,3 +83,21 @@
     background-color: rgb(77, 49, 12);
     color: aliceblue;
 }
+
+@media screen and (max-width: 1148px) {
+    .shopHeader{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 1448px) {
+    .ProductsContainer{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+@media screen and (max-width: 1048px) {
+    .ProductsContainer{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
