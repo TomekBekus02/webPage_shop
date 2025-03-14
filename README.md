@@ -1,8 +1,22 @@
-# React + Vite
+Shop Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Description:
+    A web application built with React where user can:
+    1. Log into the store 
+    2. Change the theme 
+    3. Add selected products to the cart, and modify its contents. 
+    4. Proceed to checkout (currently enabled)
 
-Currently, two official plugins are available:
+HOW TO RUN THIS APP:
+   1. Clone repository:  
+      git clone https://github.com/TomekBekus02/webPage_shop.git
+      
+   2. Navigate to the project folder and install dependencies:  
+      npm install
+      
+   3. Run project:  
+      npm run dev
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To login for default user:
+login:  login
+password: password
