@@ -1,7 +1,7 @@
-Shop Page
+**Shop Page**
 
 
-Description:
+**Description:**
 
     A web application built with React where user can:
     
@@ -14,7 +14,7 @@ Description:
     4. Proceed to checkout (currently enabled)
     
 
-HOW TO RUN THIS APP:
+**HOW TO RUN THIS APP:**
    
    1. Clone repository:  
       git clone https://github.com/TomekBekus02/webPage_shop.git
@@ -25,7 +25,7 @@ HOW TO RUN THIS APP:
    3. Run project:  
       npm run dev
 
-To login for default user:
+**To login for default user:**
     
     1. login:  login
     
