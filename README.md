@@ -1,6 +1,8 @@
 Shop Page
 
+
 Description:
+
     A web application built with React where user can:
     
     1. Log into the store 
