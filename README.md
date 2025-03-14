@@ -18,5 +18,5 @@ HOW TO RUN THIS APP:
       npm run dev
 
 To login for default user:
-login:  login
-password: password
+    login:  login
+    password: password
