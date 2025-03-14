@@ -2,6 +2,7 @@ Shop Page
 
 Description:
     A web application built with React where user can:
+    
     1. Log into the store 
     
     2. Change the theme 
@@ -12,6 +13,7 @@ Description:
     
 
 HOW TO RUN THIS APP:
+   
    1. Clone repository:  
       git clone https://github.com/TomekBekus02/webPage_shop.git
       
@@ -22,6 +24,8 @@ HOW TO RUN THIS APP:
       npm run dev
 
 To login for default user:
+    
     1. login:  login
+    
     2. password: password
 
